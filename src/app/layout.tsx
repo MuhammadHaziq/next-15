@@ -18,8 +18,10 @@ export default function BlogLayout({
     <html lang="en">
       <body>
       <Header />
+        <div className="flex flex-col min-h-[calc(100vh-152px)] space-y-auto py-10">
         {children}
-        <footer className="bg-gray-800 text-white p-4 mt-10">
+        </div>
+        <footer className="bg-gray-800 text-white p-4 ">
           <h1 className="text-2xl font-bold">Footer</h1>
         </footer>
         </body>
