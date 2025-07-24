@@ -1,6 +1,7 @@
 import Link from "next/link";
 
-export default function Articles() {
+export default async function Articles() {
+  await new Promise(resolve => setTimeout(resolve, 5000));
   return (
     <div>
       <h1>Articles</h1>
