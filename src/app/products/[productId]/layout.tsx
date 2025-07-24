@@ -14,12 +14,19 @@ type Props = {
 //     };
 // }
 
+function getRandomNumber(max: number) {
+  return Math.floor(Math.random() * max);
+}
 
 export default async function productDetailLayout({
     children,
     params  
 }: Props) {
     const { productId } = await params;
+    const randomNumber = getRandomNumber(2);
+    if (randomNumber === 1) {
+      throw new Error("Error in Product Id");
+    }
     return <div>{children}
     <div className="flex items-center justify-center">
         <h1>Featured Products (Nested Layout) - productId: {productId}</h1>
