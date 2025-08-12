@@ -10,13 +10,16 @@ export default function DashboardLayout({
   users,
   revenue,
   notifications,
+  login,
 }: {
   children: React.ReactNode;
   users: React.ReactNode;
   revenue: React.ReactNode;
   notifications: React.ReactNode;
+  login: React.ReactNode;
 }) {
-  return (
+  const isLoggedIn = false;
+  return isLoggedIn ? (
     <div>
       {children}
       <div className="flex gap-4 py-4">
@@ -25,5 +28,7 @@ export default function DashboardLayout({
       </div>
       <div className="flex p-4 border border-gray-300 rounded-md">{notifications}</div>
     </div>
+  ) : (
+    login
   );
 }
