@@ -1,6 +1,6 @@
 import {type NextRequest} from "next/server";
 import { comments } from "./data";
-
+import { headers } from "next/headers";
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
   const searchQuery = searchParams.get("search");
@@ -16,6 +16,10 @@ export async function POST(request: Request) {
    /** Both Gives Same Result  */
       // new Headers(request.headers);
       // request.headers
+
+    /** Get Headers from Next.js These headers are readonly */
+      // const header = await headers();
+      // const token = header.get("Authorization");
 
   /** Direct access to headers - more efficient for reading */
   const token = request.headers.get("Authorization");
