@@ -95,7 +95,7 @@ export const config = {
   matcher: [
     "/",
     "/dashboard/:path*", // All dashboard routes and subroutes
-    // "/api/:path*",     // Uncomment to run on all API routes
+    "/api/:path*",     // Uncomment to run on all API routes
     // "/((?!_next/static|_next/image|favicon.ico).*)" // Uncomment to run on all routes
   ]
 };
