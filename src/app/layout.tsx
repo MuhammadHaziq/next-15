@@ -9,6 +9,7 @@ import Header from '@/component/Header'
 import '@/styles/globals.css'
 import { Metadata } from 'next'
 import { ErrorWrapper } from './error-wrapper'
+import { ThemeProvider } from '@/component/theme-provider'
 export default function BlogLayout({
   children,
 }: {
@@ -16,6 +17,7 @@ export default function BlogLayout({
 }) {
   return (
     <html lang="en">
+      <ThemeProvider>
       <body>
       <Header />
         <div className="flex flex-col min-h-[calc(100vh-152px)] space-y-auto py-10">
@@ -27,6 +29,7 @@ export default function BlogLayout({
           <h1 className="text-2xl font-bold">Footer</h1>
         </footer>
         </body>
+        </ThemeProvider>
     </html>
   )
 }

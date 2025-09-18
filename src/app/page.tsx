@@ -1,7 +1,11 @@
+"use client"
+import { useTheme } from "@/component/theme-provider";
+
 export default function Home() {
+  const { theme, setTheme } = useTheme()
   return (<>
     <div className="flex flex-col items-center justify-center h-[500px] bg-red-500">
-      <h1 className="text-2xl font-bold">Home</h1>
+      <h1 className="text-2xl font-bold">Home {theme}</h1>
       <p className="text-sm text-gray-500">Welcome to the home page</p>
     </div>
     <div className="flex flex-col items-center justify-center h-[500px] bg-blue-500">
