@@ -38,10 +38,10 @@ export default function UsersClient() {
     if(loading) return <div>Loading...</div>
     if(error) return <div>Error: {error}</div>
     /** Create list design for users and add white background and black text */
-    return <div>
+    return <div className="space-y-2 p-2">
         {users.map((user) => (
             /** Create List view foe show cuser detail as given in type User */
-            <div key={user.id} className="bg-gray-200 text-black p-2 m-2 rounded-md">
+            <div key={user.id} className="bg-gray-200 text-black p-2 rounded-md">
                 <div>{user.name}</div>
                 <div>{user.email}</div>
                 <div>{user.phone}</div>
